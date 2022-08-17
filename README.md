@@ -8,8 +8,6 @@ You might want to read [ELM327-emulator README](https://github.com/Ircama/ELM327
 # Before first launch
 In `path.config`, provide absolute path to the directory with mock files.
 
-# Launch
-
 # Usage
 From command prompt in current directory:
 ```
