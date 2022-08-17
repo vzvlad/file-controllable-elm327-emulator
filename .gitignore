@@ -1,3 +1,7 @@
+./out.txt
+
+### From origina repo
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
