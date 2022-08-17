@@ -15,7 +15,8 @@ run.bat
 ```
 Now you can do 3 things:
 
-**Provide mock values for PIDs**
+#### 1. Provide mock values for PIDs
+
 To manipulate output value on PID `$PID$` of ECU `$ECU`, create file `$ECU$_$PID.txt` and flush desired value in it. Both `$ECU$` and `$PID$` are lowercase hexadecimals without spaces. For example, if file `7e0-010c.txt` content is:
 ```
 2327
@@ -24,11 +25,13 @@ then engine speed will be set to 2327 rpm. This is because engine speed is contr
 
 More PIDs are on a dedicated [Wikipedia page.](https://en.wikipedia.org/wiki/OBD-II_PIDs)
 
-**Provide mock values for DTCs**
+#### 2. Provide mock values for DTCs
+
 When `dtc.txt` is not empty, emulator will respond to "Read DTC" request with an error C0300. Don't block `dtc.txt`, because on "Clear DTC" request it will be flushed.
 
-**Turn engine on or off**
+#### 3. Turn engine on or off
+
 When `engineoff.txt` is not empty, emulator will behave as if engine is turned off.
 
 # Troubleshooting
-Look in `elm.log`, it might contain polite error message, explaining, how to fix it. If log doesn't help, contact author via email: zahrevskiy@gmail.com
+Look in `elm.log`, it might contain polite error messages, explaining, how to fix them. If log doesn't help, contact author via email: zahrevskiy@gmail.com
