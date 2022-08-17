@@ -2286,12 +2286,13 @@ ObdMessage = {
         'SHOW_DIAG_TC': {
             'Request': '^03' + ELM_FOOTER,
             'Descr': 'Show stored Diagnostic Trouble Codes',
-            'Response': ST('NO DATA'),
+            'Task': 'task_dtc_from_file',
+            'Response': HD(ECU_R_ADDR_E) + SZ('07') + DT('43 00 00 00 00 00 00'),
         },
         'CLEAR_DIAG_TC': {
             'Request': '^04' + ELM_FOOTER,
             'Descr': 'Clear Diagnostic Trouble Codes and stored values',
-            'Header': ECU_ADDR_E,
+            'Task': 'task_dtc_from_file',
             'Response': HD(ECU_R_ADDR_E) + SZ('01') + DT('44')
         },
         'SHOW_PENDING_TC': {
